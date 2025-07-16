@@ -4,6 +4,11 @@
     <springProperty name="ACTIVE_PROFILE_NAME" source="spring.profiles.active" defaultValue="default"/>
     <property name="DEFAULT_PATTERN" value="%d{yyyy-MM-dd HH:mm:ss} [${ACTIVE_PROFILE_NAME}] %-5level [%thread] %logger{36} - %msg%n"/>
 
+    <appender name="LOGSTASH" class="net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>logstash:5044</destination>
+        <encoder class="net.logstash.logback.encoder.LogstashEncoder" />
+    </appender>
+
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
             <pattern>${DEFAULT_PATTERN}</pattern>
@@ -31,6 +36,7 @@
         <root level="INFO">
             <appender-ref ref="CONSOLE"/>
             <appender-ref ref="FILE"/>
+            <appender-ref ref="LOGSTASH"/>
         </root>
     </springProfile>
 
