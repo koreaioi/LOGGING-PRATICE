@@ -1,19 +1,12 @@
----
-name: Practice
-about: What topic do you practice?
-title: "[Practice] [Issue name]"
-labels: ''
-assignees: ''
+## ➕ 연관된 이슈
+> #이슈번호
+> Close #이슈번호
 
----
+## 📑 작업 내용
+> - 이번 PR에서 작업한 내용 간략히 설명해주세요
 
-## 무엇을?
-> 추가하려는 기능에 대해 간결하게 설명
+## ✂️ 스크린샷 (선택)
+>
 
-## 작업 상세 내용
-
-- [ ] TODO
-- [ ] TODO
-
-
-## 참고 자료
+## 💭 리뷰 요구사항 (선택)
+> 리뷰어가 특별히 봐주었으면 하는 부분이 있다면 작성해주세요
